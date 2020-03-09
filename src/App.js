@@ -9,6 +9,8 @@ import Signin from "./components/Signin/Signin";
 import Register from "./components/Registration/Register";
 import Loading from './components/Loading/Loading'
 
+import config from './particles-config'
+
 import Particles from "react-particles-js";
 import Clarifai from "clarifai";
 
@@ -144,17 +146,7 @@ class App extends Component {
       <div className="App">
         <Particles
           className="particles"
-          params={{
-            particles: {
-              line_linked: {
-                shadow: {
-                  enable: true,
-                  color: "#3CA9D1",
-                  blur: 5
-                }
-              }
-            }
-          }}
+          params={config}
         />
         <Navigation
           onRouteChange={this.onRouteChange}
